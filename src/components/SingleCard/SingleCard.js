@@ -16,7 +16,7 @@ const SingleCard = (props) => {
                     <h2 className="card-title">Duration : <span className='text-teal-500'>{time}s.</span></h2>
 
                     <div className="card-actions justify-center">
-                        <button onClick={() => handelCart(time)} className="btn btn-block btn-primary">Buy Now</button>
+                        <button onClick={() => handelCart(time)} className="btn btn-block btn-primary">Add Exercise</button>
                     </div>
                 </div>
             </div>
