@@ -1,10 +1,10 @@
 const addToLS = (time) => {
-    localStorage.setItem('Break Time', JSON.stringify((time) + "s"));
+    localStorage.setItem('Break Time', JSON.stringify(time));
 }
 
 const setFromLs = () => {
     const settedTime = localStorage.getItem('Break Time');
-    console.log(JSON.parse(settedTime))
+    return JSON.parse(settedTime);
 }
 
 export { addToLS, setFromLs }
