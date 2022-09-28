@@ -58,7 +58,7 @@ const Activites = (props) => {
             <div className=' mt-4 mx-3 bg-white p-2  rounded-lg'>
                 <p className='font-semibold ml-2 text-xl'>Break time : {offTime + 's'}</p>
             </div>
-            <div className="card-actions mt-8 mx-2 justify-center">
+            <div className="card-actions mb-10  mt-8 mx-2 justify-center">
                 <button onClick={() => sweetalert()} className="btn btn-block btn-primary">Activity Completed</button>
             </div>
         </div>
