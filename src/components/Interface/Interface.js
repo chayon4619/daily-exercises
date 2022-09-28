@@ -6,7 +6,7 @@ const Interface = () => {
 
 
     const [exercises, setExercises] = useState([]);
-    const [time, setTime] = useState([])
+    const [time, setTime] = useState([0])
 
     useEffect(() => {
         fetch('excersise.json')

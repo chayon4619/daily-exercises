@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { addToLS } from '../../utilites/localstorage';
 
 const Activites = (props) => {
 
@@ -8,6 +9,7 @@ const Activites = (props) => {
 
     const handelBreak = (time) => {
         setOffTime(time)
+        addToLS(time)
     }
 
     return (
@@ -42,7 +44,7 @@ const Activites = (props) => {
             </div>
             <p className='font-semibold mt-8 ml-4 text-2xl '>Exercise Details :</p>
             <div className=' mt-4 mx-3 bg-white p-2  rounded-lg'>
-                <p className='font-semibold ml-2 text-xl'>Exercise time : {time}</p>
+                <p className='font-semibold ml-2 text-xl'>Exercise time : {time + 's'}</p>
             </div>
             <div className=' mt-4 mx-3 bg-white p-2  rounded-lg'>
                 <p className='font-semibold ml-2 text-xl'>Break time : {offTime + 's'}</p>
