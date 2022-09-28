@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { addToLS } from '../../utilites/localstorage';
+import Swal from 'sweetalert2';
 
 const Activites = (props) => {
 
@@ -10,6 +11,14 @@ const Activites = (props) => {
     const handelBreak = (time) => {
         setOffTime(time)
         addToLS(time)
+    }
+
+    const sweetalert = () => {
+        Swal.fire(
+            'Good job!',
+            'You Finished Daily Task!',
+            'success'
+        )
     }
 
     return (
@@ -50,7 +59,7 @@ const Activites = (props) => {
                 <p className='font-semibold ml-2 text-xl'>Break time : {offTime + 's'}</p>
             </div>
             <div className="card-actions mt-8 mx-2 justify-center">
-                <button className="btn btn-block btn-primary">Activity Completed</button>
+                <button onClick={() => sweetalert()} className="btn btn-block btn-primary">Activity Completed</button>
             </div>
         </div>
     );
