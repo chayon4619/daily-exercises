@@ -14,10 +14,9 @@ const Interface = () => {
             .then(data => setExercises(data))
     }, [])
 
-    const handelCart = (time) => {
-        // console.log(time)
-        setTime(time);
-
+    const handelCart = (newTime) => {
+        const newTimeArr = [...time, newTime]
+        setTime(newTimeArr);
     }
     return (
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">

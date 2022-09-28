@@ -6,6 +6,12 @@ const Activites = (props) => {
 
     const { time } = props;
 
+    let totalTime = 0;
+
+    for (const t of time) {
+        totalTime = totalTime + t;
+    }
+
     const [offTime, setOffTime] = useState([0]);
 
     const handelBreak = (time) => {
@@ -54,7 +60,7 @@ const Activites = (props) => {
             </div>
             <p className='font-semibold mt-8 ml-4 text-2xl '>Exercise Details :</p>
             <div className=' mt-4 mx-3 bg-white p-2  rounded-lg'>
-                <p className='font-semibold ml-2 text-xl'>Exercise time : {time + 's'}</p>
+                <p className='font-semibold ml-2 text-xl'>Exercise time : {totalTime + 's'}</p>
             </div>
             <div className=' mt-4 mx-3 bg-white p-2  rounded-lg'>
                 <p className='font-semibold ml-2 text-xl'>Break time : {offTime + 's'}</p>
