@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { addToLS } from '../../utilites/localstorage';
+import { addToLS, setFromLs } from '../../utilites/localstorage';
 import Swal from 'sweetalert2';
 
 const Activites = (props) => {
@@ -11,6 +11,7 @@ const Activites = (props) => {
     const handelBreak = (time) => {
         setOffTime(time)
         addToLS(time)
+        setFromLs()
     }
 
     const sweetalert = () => {

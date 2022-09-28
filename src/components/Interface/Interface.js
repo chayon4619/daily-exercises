@@ -16,9 +16,9 @@ const Interface = () => {
 
     const handelCart = (time) => {
         // console.log(time)
-        setTime(time)
-    }
+        setTime(time);
 
+    }
     return (
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
             <div className="card-container col-span-3 mt-14 ml-4 lg:ml-20">
@@ -33,10 +33,8 @@ const Interface = () => {
                         ></SingleCard>)
                     }
                 </div>
-
-
             </div>
-            <div className="activities-container ml-4  bg-slate-200">
+            <div className="activities-container ml-4 bg-slate-200">
                 <Activites
                     time={time}
                 ></Activites>

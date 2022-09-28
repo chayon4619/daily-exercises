@@ -2,9 +2,6 @@ import React from 'react';
 import './SingleCard.css'
 const SingleCard = (props) => {
 
-    // const handelCart = () => {
-    //     console.log('clicked')
-    // }
 
     const { name, picture, age, time } = props.exercise;
     const { handelCart } = props
