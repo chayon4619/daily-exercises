@@ -1,11 +1,11 @@
-
 import './App.css';
+import Interface from './components/Interface/Interface';
 
 function App() {
   return (
     <div className="App">
-      <h1>hello</h1>
-      <button className="btn btn-primary">Button</button>
+      <Interface></Interface>
+
     </div>
   );
 }
