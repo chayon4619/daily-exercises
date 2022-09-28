@@ -1,16 +1,23 @@
 import React, { useEffect, useState } from 'react';
+import Activites from '../Activites/Activites';
 import SingleCard from '../SingleCard/SingleCard';
 
 const Interface = () => {
 
 
-    const [exercises, setExercises] = useState([])
+    const [exercises, setExercises] = useState([]);
+    const [time, setTime] = useState([])
 
     useEffect(() => {
         fetch('excersise.json')
             .then(res => res.json())
             .then(data => setExercises(data))
     }, [])
+
+    const handelCart = (time) => {
+        // console.log(time)
+        setTime(time)
+    }
 
     return (
         <div class="grid grid-cols-4 gap-4">
@@ -22,6 +29,7 @@ const Interface = () => {
                         exercises.map(exercise => <SingleCard
                             key={exercise._id}
                             exercise={exercise}
+                            handelCart={handelCart}
                         ></SingleCard>)
                     }
                 </div>
@@ -29,7 +37,9 @@ const Interface = () => {
 
             </div>
             <div className="activities-container bg-slate-200">
-                <h1>gelo</h1>
+                <Activites
+                    time={time}
+                ></Activites>
             </div>
         </div>
     );

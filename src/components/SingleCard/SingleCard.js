@@ -1,7 +1,13 @@
 import React from 'react';
 import './SingleCard.css'
 const SingleCard = (props) => {
-    const { name, picture, age, time, _id } = props.exercise
+
+    // const handelCart = () => {
+    //     console.log('clicked')
+    // }
+
+    const { name, picture, age, time } = props.exercise;
+    const { handelCart } = props
     return (
         <div>
             <div className="card card-compact w-96 bg-base-100 shadow-xl one-card">
@@ -13,7 +19,7 @@ const SingleCard = (props) => {
                     <h2 className="card-title">Duration : <span className='text-teal-500'>{time}s.</span></h2>
 
                     <div className="card-actions justify-center">
-                        <button className="btn btn-block btn-primary">Buy Now</button>
+                        <button onClick={() => handelCart(time)} className="btn btn-block btn-primary">Buy Now</button>
                     </div>
                 </div>
             </div>
