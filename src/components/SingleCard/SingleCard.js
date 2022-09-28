@@ -11,7 +11,7 @@ const SingleCard = (props) => {
                 <figure><img src={picture} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title text-blue-800">{name}</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <p>Exercise is very important for our health.We should exercise everyday.</p>
                     <h2 className="card-title">Age Limit : <span className='text-rose-700'>{age}yr.</span> </h2>
                     <h2 className="card-title">Duration : <span className='text-teal-500'>{time}s.</span></h2>
 
