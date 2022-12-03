@@ -2,5 +2,4 @@
 
 Live Site [Daily Exercises](https://daily-exercise-08.netlify.app/).
 
-## Available Scripts
 
